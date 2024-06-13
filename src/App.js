@@ -8,8 +8,14 @@ function App() {
         <table className="header-table">
           <tbody>
             <tr>
-              <td colSpan="2" className="header">
-                <h2>Sai Cargo Freight Forwarders Pvt. Ltd.</h2>
+              <td colSpan="3" className="header">
+                <h2><strong>Tax Invoice</strong></h2>
+                <p><b>(Section 31 of CGST Act,2017 read with Rule 46 of CGST Rule,2017 state GST Act & Rule)</b> Original For Recipient</p>
+              </td>
+            </tr>
+            <tr>
+              <td className="left">
+                <h1><strong>Sai Cargo Freight Forwarders Pvt. Ltd.</strong></h1>
                 <p>REGD. OFF.: HNO. WZ200A TF KHNO. 67/1 12/1, GALI NO. 3</p>
                 <p>SADH NAGAR, PALAM COLONY, NEAR RAM CHOWK</p>
                 <p>GSTIN/UIN: 07AAUCS1139F1Z6</p>
@@ -17,25 +23,40 @@ function App() {
                 <p>CIN No.: U63020DL2014PTC263449</p>
                 <p>E-Mail: saicargodelhi@gmail.com, accounts@scfpl.com</p>
               </td>
+              <td className="middle">
+                <p>Invoice No.: <b>12627</b></p> <hr />
+                <p>Consignor Invoice No.: <b>HVJ/DN/20/21/002</b></p> <hr />
+                <p>Despatch Details (if Applicable):</p> 
+                 <p>E-Way Bill No.: </p>
+                <p>Docket No.: <b>103184</b></p> 
+               
+                
+              </td>
+              <td className="right">
+               <p>Invoice Date: <b>31-Aug-2020</b></p><hr />
+               <p>Consignor Invoice Date: <b>31-Aug-2020</b></p> <hr />
+               <p>Mode  <br></br><b>TRAIN</b></p>
+              
+              </td>
             </tr>
             <tr>
               <td className="left">
-                <p>Invoice No.: 12627</p>
-                <p>Invoice Date: 31-Aug-2020</p>
-                <p>Consignor Invoice No.: HVJ/DN/20/21/002</p>
-                <p>Consignor Invoice Date: 31-Aug-2020</p>
-                <p>Despatch Details (if Applicable):</p>
-                <p>E-Way Bill No.: </p>
-                <p>Docket No.: 103184</p>
-                <p>Place of Supply: HARYANA</p>
-                <p>Date of Supply: 31-Aug-2020</p>
+              <p>Bill To: <br></br> <b>AGGRESSIVE DIGITAL SYSTEMS PVT. LTD.
+                  PLOT NO-596,597, SECTOR-8, IMT MANESAR, GURGAON</b></p>
+                <p><b>State:</b> Haryana  <b>State Code:</b> 06</p>
+                <p><b>PIN Code:</b> 122050</p>
+                <p><b>GST No.:</b> 06AANCA7751J1ZA</p>
+          
+              </td>
+              <td className="middle">
+              <p>Place of Supply: <b>HARYANA</b></p> <hr />
+              <p>Origin: <b>HYDERABAD</b></p> <hr />
+              <p>Total pkt: <b>131</b></p>
               </td>
               <td className="right">
-                <p>Bill To: AGGRESSIVE DIGITAL SYSTEMS PVT. LTD.</p>
-                <p>PLOT NO-596,597, SECTOR-8, IMT MANESAR, GURGAON</p>
-                <p>State: Haryana State Code: 06</p>
-                <p>PIN Code: 122050</p>
-                <p>GST No.: 06AANCA7751J1ZA</p>
+              <p>Date of Supply: <b>31-Aug-2020</b></p> <hr />
+              <p>Destination: <b>MANESAR</b></p> <hr />
+              <p>WT.(KG): <b>2250</b></p>
               </td>
             </tr>
           </tbody>
@@ -43,10 +64,33 @@ function App() {
         <table className="transport-details">
           <tbody>
             <tr>
-              <td>Origin: HYDERABAD</td>
-              <td>Destination: MANESAR</td>
-              <td>Total Pkt: 131</td>
-              <td>WT. (KG.): 2250</td>
+              <td>
+                Consignor Name: <br></br>
+               <b> HOME VU DIGITAL CABLE AND BROADBAAND RRNATE UMITED GNR ARCADE 6-2-982,KHAIRATABAD MAIN ROAD,HYDERABAD</b>
+
+              <br />
+              <p><b>State : </b>Telangana</p>
+              <p><b>GST NO : </b>36AAECH7383N1ZX</p> 
+              </td>
+              <td>
+              Consignor Name: <br></br>
+              <p><b>AGGRESSIVE DIGITAL SYSTEMS PVT.LTD. PLOT NO-596.597,SECTOR-3,IMT MANESAR,GURGAON</b></p>
+
+              <br />
+              <p><b>State : </b>Telangana</p>
+              <p><b>GST NO : </b>36AAECH7383N1ZX</p> 
+              </td>
+              <td>
+                Bank Details <hr />
+                A/C Name : Sai Cargo Freight Forwader Pvt.ltd <br />
+                Bank Name : ICICI Bank <br />
+                A/C Number : 347405000083
+                Address : Mahipaipur,New Delhi <br />
+                IFSC CODE : ICICI0003474
+
+                
+              </td>
+              
             </tr>
           </tbody>
         </table>
@@ -111,7 +155,7 @@ function App() {
               <td>IGST: 2,537.50</td>
             </tr>
             <tr>
-              <td>Net Amount after Tax: 53,287.50</td>
+              <td><b>Net Amount after Tax</b>: 53,287.50</td>
             </tr>
           </tbody>
         </table>
@@ -126,7 +170,6 @@ function App() {
           </div>
           <div className="footer-signature">
             <p>For Sai Cargo Freight Forwarders Pvt. Ltd</p>
-          
             <p className="signature">Authorized Signatory</p>
           </div>
         </div>
