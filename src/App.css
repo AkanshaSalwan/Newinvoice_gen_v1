@@ -12,7 +12,7 @@ body, html {
 
 .invoice {
   width: 9.5in;
-  height: 13.4in;
+  height: 15%;
   border: 1px solid black;
   padding: 25px;
   font-family: Arial, sans-serif;
@@ -22,22 +22,22 @@ body, html {
 .header-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 .transport-details {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 .goods-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 .total-table {
   width: 100%;
   border-collapse: collapse;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
 }
 
 .header-table td, .transport-details td, .goods-table th, .goods-table td, .total-table td {
@@ -78,7 +78,7 @@ body, html {
   display: flex;
   justify-content: space-between;
   font-size: 12px;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .footer-info {

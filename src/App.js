@@ -45,6 +45,7 @@ function App() {
                   PLOT NO-596,597, SECTOR-8, IMT MANESAR, GURGAON</b></p>
                 <p><b>State:</b> Haryana  <b>State Code:</b> 06</p>
                 <p><b>PIN Code:</b> 122050</p>
+                <p><b>M.No. :</b></p>
                 <p><b>GST No.:</b> 06AANCA7751J1ZA</p>
           
               </td>
@@ -97,65 +98,65 @@ function App() {
         <table className="goods-table">
           <thead>
             <tr>
-              <th>Description of Goods</th>
-              <th>SAC/HSD</th>
-              <th>WT.</th>
-              <th>Rate</th>
-              <th>Non Taxable</th>
-              <th>Taxable</th>
+              <td>Description of Goods</td>
+              <td>SAC/HSD</td>
+              <td>WT.</td>
+              <td>Rate</td>
+              <td>Non Taxable</td>
+              <td>Taxable</td>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>T - Freight</td>
-              <td>996512</td>
-              <td>2250</td>
-              <td>19</td>
-              <td></td>
-              <td>42,750.00</td>
+              <th>T - Freight</th>
+              <th>996512</th>
+              <th>2250</th>
+              <th>19</th>
+              <th></th>
+              <th>42,750.00</th>
             </tr>
             <tr>
-              <td>T - Docket Charges</td>
-              <td>996512</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>200.00</td>
+              <th>T - Docket Charges</th>
+              <th>996512</th>
+              <th></th>
+              <hd></hd>
+              <th></th>
+              <th>200.00</th>
             </tr>
             <tr>
-              <td>T - Pickup Charges</td>
-              <td>996512</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>3,000.00</td>
+              <th>T - Pickup Charges</th>
+              <th>996512</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>3,000.00</th>
             </tr>
             <tr>
-              <td>T - Delivery Charges</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>4,500.00</td>
+              <th>T - Delivery Charges</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>4,500.00</th>
             </tr>
             <tr>
-              <td>T - Station Clearance Charges</td>
-              <td>996512</td>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td>300.00</td>
+              <th>T - Station Clearance Charges</th>
+              <th>996512</th>
+              <th></th>
+              <th></th>
+              <th></th>
+              <th>300.00</th>
             </tr>
           </tbody>
         </table>
         <table className="total-table">
           <tbody>
             <tr>
-              <td>Tax Payable in words: Indian Rupees Two Thousand Five Hundred Thirty Seven and Fifty paise Only</td>
+              <td>Tax Payable in words: <b>Indian Rupees Two Thousand Five Hundred Thirty Seven and Fifty paise Only</b></td>
               <td>
-               <b> IGST:</b>   2,537.50
+                IGST:  <b> 2,537.50</b>
                 <br></br>
-                <p><b>Net Amount after Tax</b>: 53,287.50</p>
+                <p>Net Amount after Tax: <b>53,287.50</b></p>
               </td>
             </tr>
             <tr>
