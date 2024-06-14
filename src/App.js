@@ -152,13 +152,57 @@ function App() {
           <tbody>
             <tr>
               <td>Tax Payable in words: Indian Rupees Two Thousand Five Hundred Thirty Seven and Fifty paise Only</td>
-              <td>IGST: 2,537.50</td>
+              <td>
+               <b> IGST:</b>   2,537.50
+                <br></br>
+                <p><b>Net Amount after Tax</b>: 53,287.50</p>
+              </td>
             </tr>
             <tr>
-              <td><b>Net Amount after Tax</b>: 53,287.50</td>
             </tr>
           </tbody>
         </table>
+       
+        <table className="goods-table">
+          <thead>
+            <tr>
+              <th>HSN/SAC</th>
+              <th>Taxable value</th>
+              <th colspan="2">Integrated Tax</th>
+              <th>Total Tax Amount</th>
+             
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td><b>Rate</b></td>
+              <td><b>Amount</b></td>
+              <td></td>
+             
+            </tr>
+            <tr>
+              <td>996512</td>
+              <td>50,750.50</td>
+              <td>5%</td>
+              <td>2,537.50</td>
+              <td>2,537.50</td>
+             
+            </tr>
+            <tr>
+              <td><b>Total</b></td>
+              <td><b>50,750.50</b></td>
+              <td></td>
+              <td><b>2,537.50</b></td>
+              <td><b>2,537.50</b></td>
+             
+            </tr>
+            
+            
+          </tbody>
+        </table>
+        
         <div className="footer">
           <div className="footer-info">
             <p>Total Payable in words inclusive tax: <b>Indian Rupees Fifty Three Thousand Two Hundred Eighty Seven and Fifty paise Only ( ₹ 53,287.50 )</b></p> <hr></hr>
