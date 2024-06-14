@@ -19,7 +19,22 @@ body, html {
   box-sizing: border-box;
 }
 
-.header-table, .transport-details, .goods-table, .total-table {
+.header-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+.transport-details {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+.goods-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 15px;
+}
+.total-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 15px;
@@ -37,6 +52,9 @@ body, html {
   margin: 0;
   padding: 0;
   font-size: 16px;
+}
+.header p{
+  text-align: center;
 }
 
 .left {
