@@ -1,226 +1,365 @@
-import React from 'react';
-import './App.css';
+import React, { useEffect } from 'react';
+import './Invoice.css';
 
-function App() {
-  return (
-    <div className="container">
-      <div className="invoice">
-        <table className="header-table">
-          <tbody>
-            <tr>
-              <td colSpan="3" className="header">
-                <h2><strong>Tax Invoice</strong></h2>
-                <p><b>(Section 31 of CGST Act,2017 read with Rule 46 of CGST Rule,2017 state GST Act & Rule)</b> Original For Recipient</p>
-              </td>
-            </tr>
-            <tr>
-              <td className="left">
-                <h1><strong>Sai Cargo Freight Forwarders Pvt. Ltd.</strong></h1>
-                <p>REGD. OFF.: HNO. WZ200A TF KHNO. 67/1 12/1, GALI NO. 3</p>
-                <p>SADH NAGAR, PALAM COLONY, NEAR RAM CHOWK</p>
-                <p>GSTIN/UIN: 07AAUCS1139F1Z6</p>
-                <p>State Name : Delhi, Code : 07</p>
-                <p>CIN No.: U63020DL2014PTC263449</p>
-                <p>E-Mail: saicargodelhi@gmail.com, accounts@scfpl.com</p>
-              </td>
-              <td className="middle">
-                <p>Invoice No.: <b>12627</b></p> <hr />
-                <p>Consignor Invoice No.: <b>HVJ/DN/20/21/002</b></p> <hr />
-                <p>Despatch Details (if Applicable):</p> 
-                 <p>E-Way Bill No.: </p>
-                <p>Docket No.: <b>103184</b></p> 
-               
+const Invoice = () => {
+    useEffect(() => {
+        const invoiceData = {
+            "invoiceHeader": {
+                "title": "Tax Invoice",
+                "sectionAndRuleReference": "Section 31 of CGST Act,2017 read with Rule 46 of CGST Rule,2017 state GST Act & Rule",
+                "originalForRecipient": "Original For Recipient"
+            },
+            "companyInformation": {
+                "companyName": "Sai Cargo Freight Forwarders Pvt. Ltd.",
+                "address": {
+                    "line1": "REGD. OFF.: HNO. WZ200A TF KHNO. 67/1 12/1, GALI NO. 3",
+                    "line2": "SADH NAGAR, PALAM COLONY, NEAR RAM CHOWK"
+                },
+                "gstin": "07AAUCS1139F1Z6",
+                "state": {
+                    "name": "Delhi",
+                    "code": "07"
+                },
+                "cinNo": "U63020DL2014PTC263449",
+                "email": [
+                    "saicargodelhi@gmail.com",
+                    "accounts@scfpl.com"
+                ]
+            },
+            "invoiceDetails": {
+                "invoiceNo": "12627",
+                "consignorInvoiceNo": "HVJ/DN/20/21/002",
+                "despatchDetails": {
+                    "eWayBillNo": "",
+                    "docketNo": "103184"
+                },
+                "invoiceDate": "31-Aug-2020",
+                "consignorInvoiceDate": "31-Aug-2020",
+                "mode": "TRAIN"
+            },
+            "billingInformation": {
+                "billTo": {
+                    "name": "AGGRESSIVE DIGITAL SYSTEMS PVT. LTD.",
+                    "address": "PLOT NO-596,597, SECTOR-8, IMT MANESAR, GURGAON",
+                    "state": {
+                        "name": "Haryana",
+                        "code": "06"
+                    },
+                    "pinCode": "122050",
+                    "mNo": "",
+                    "gstNo": "06AANCA7751J1ZA"
+                }
+            },
+            "supplyAndShippingInformation": {
+                "placeOfSupply": "HARYANA",
+                "origin": "HYDERABAD",
+                "totalPkt": "131",
+                "dateOfSupply": "31-Aug-2020",
+                "destination": "MANESAR",
+                "weightKg": "2250",
                 
-              </td>
-              <td className="right">
-               <p>Invoice Date: <b>31-Aug-2020</b></p><hr />
-               <p>Consignor Invoice Date: <b>31-Aug-2020</b></p> <hr />
-               <p>Mode  <br></br><b>TRAIN</b></p>
-              
-              </td>
-            </tr>
-            <tr>
-              <td className="left">
-              <p>Bill To: <br></br> <b>AGGRESSIVE DIGITAL SYSTEMS PVT. LTD.
-                  PLOT NO-596,597, SECTOR-8, IMT MANESAR, GURGAON</b></p>
-                <p><b>State:</b> Haryana  <b>State Code:</b> 06</p>
-                <p><b>PIN Code:</b> 122050</p>
-                <p><b>M.No. :</b></p>
-                <p><b>GST No.:</b> 06AANCA7751J1ZA</p>
-          
-              </td>
-              <td className="middle">
-              <p>Place of Supply: <b>HARYANA</b></p> <hr />
-              <p>Origin: <b>HYDERABAD</b></p> <hr />
-              <p>Total pkt: <b>131</b></p>
-              </td>
-              <td className="right">
-              <p>Date of Supply: <b>31-Aug-2020</b></p> <hr />
-              <p>Destination: <b>MANESAR</b></p> <hr />
-              <p>WT.(KG): <b>2250</b></p>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <table className="transport-details">
-          <tbody>
-            <tr>
-              <td>
-                Consignor Name: <br></br>
-               <b> HOME VU DIGITAL CABLE AND BROADBAAND RRNATE UMITED GNR ARCADE 6-2-982,KHAIRATABAD MAIN ROAD,HYDERABAD</b>
+            },
+            "consignorInformation": {
+                "consignor": {
+                    "name": "HOME VU DIGITAL CABLE AND BROADBAND RRNATE LIMITED",
+                    "address": "GNR ARCADE 6-2-982, KHAIRATABAD MAIN ROAD, HYDERABAD",
+                    "state": "Telangana",
+                    "gstNo": "36AAECH7383N1ZX"
+                },
+                "consignee": {
+                    "name": "AGGRESSIVE DIGITAL SYSTEMS PVT. LTD.",
+                    "address": "PLOT NO-596,597, SECTOR-3, IMT MANESAR, GURGAON",
+                    "state": "Telangana",
+                    "gstNo": "36AAECH7383N1ZX"
+                }
+            },
+            "bankDetails": {
+                "accountName": "Sai Cargo Freight Forwarder Pvt. Ltd",
+                "bankName": "ICICI Bank",
+                "accountNumber": "347405000083",
+                "address": "Mahipaipur, New Delhi",
+                "ifscCode": "ICICI0003474"
+            },
+            "goodsAndChargesInformation": {
+                "items": [
+                    {
+                        "description": "T - Freight",
+                        "sacHsd": "996512",
+                        "weight": 2250,
+                        "rate": 19,
+                        "nonTaxable": null,
+                        "taxable": 42750.00
+                    },
+                    {
+                        "description": "T - Docket Charges",
+                        "sacHsd": "996512",
+                        "weight": null,
+                        "rate": null,
+                        "nonTaxable": null,
+                        "taxable": 200.00
+                    },
+                    {
+                        "description": "T - Pickup Charges",
+                        "sacHsd": "996512",
+                        "weight": null,
+                        "rate": null,
+                        "nonTaxable": null,
+                        "taxable": 3000.00
+                    },
+                    {
+                        "description": "T - Delivery Charges",
+                        "sacHsd": null,
+                        "weight": null,
+                        "rate": null,
+                        "nonTaxable": null,
+                        "taxable": 4500.00
+                    },
+                    {
+                        "description": "T - Station Clearance Charges",
+                        "sacHsd": "996512",
+                        "weight": null,
+                        "rate": null,
+                        "nonTaxable": null,
+                        "taxable": 300.00
+                    },
+                    {
+                      "description": "T - Station Clearance Charges",
+                      "sacHsd": "996512",
+                      "weight": null,
+                      "rate": null,
+                      "nonTaxable": null,
+                      "taxable": 300.00
+                  }
+                    
+                ]
+            },
+            "taxInformation": {
+                "taxPayableInWords": "Indian Rupees Two Thousand Five Hundred Thirty Seven and Fifty paise Only",
+                "igst": 2537.50,
+                "netAmountAfterTax": 53287.50
+            },
+            "hsnSacDetails": {
+                "hsnSac": "996512",
+                "taxableValue": 50750.50,
+                "integratedTax": {
+                    "rate": "5%",
+                    "amount": 2537.50
+                },
+                "totalTaxAmount": 2537.50,
+                "total": {
+                    "taxableValue": 50750.50,
+                    "integratedTaxAmount": 2537.50,
+                    "totalTaxAmount": 2537.50
+                }
+            },
+            "footerInformation": {
+                "totalPayableInWords": "Indian Rupees Fifty Three Thousand Two Hundred Eighty Seven and Fifty paise Only (₹ 53,287.50)",
+                "jurisdiction": "All disputes arising under this bill shall be subject to New Delhi jurisdiction.",
+                "paymentTerms": "Interest @ 22% per annum will be charged on total bill amount if payments are not made within 15 days of presentation of the bill.",
+                "paymentMethod": "Payments by Draft/Account payee cheque only.",
+                "discrepancyClause": "Any discrepancy in the bill must be reported back within 5 days. We will not accept any Debit against this bill later on.",
+                "panNo": "AAUCS1139F",
+                "tanNo": "DELS54477D",
+                "gstNo": "07AAUCS1139F1Z6"
+            },
+            "footerSignature": {
+                "companyName": "For Sai Cargo Freight Forwarders Pvt. Ltd",
+                "authorizedSignatory": "Authorized Signatory"
+            }
+        };
 
-              <br />
-              <p><b>State : </b>Telangana</p>
-              <p><b>GST NO : </b>36AAECH7383N1ZX</p> 
-              </td>
-              <td>
-              Consignor Name: <br></br>
-              <p><b>AGGRESSIVE DIGITAL SYSTEMS PVT.LTD. PLOT NO-596.597,SECTOR-3,IMT MANESAR,GURGAON</b></p>
+        // Populate data into HTML elements using vanilla JavaScript inside useEffect
+        document.getElementById('invoiceTitle').innerText = invoiceData.invoiceHeader.title;
+        document.getElementById('sectionAndRuleReference').innerText = invoiceData.invoiceHeader.sectionAndRuleReference;
 
-              <br />
-              <p><b>State : </b>Telangana</p>
-              <p><b>GST NO : </b>36AAECH7383N1ZX</p> 
-              </td>
-              <td>
-                Bank Details <hr />
-                A/C Name : Sai Cargo Freight Forwader Pvt.ltd <br />
-                Bank Name : ICICI Bank <br />
-                A/C Number : 347405000083
-                Address : Mahipaipur,New Delhi <br />
-                IFSC CODE : ICICI0003474
+        document.getElementById('companyInformation').innerHTML = `
+            <b>${invoiceData.companyInformation.companyName}</b><br>
+            ${invoiceData.companyInformation.address.line1}<br>
+            ${invoiceData.companyInformation.address.line2}<br>
+            GSTIN: ${invoiceData.companyInformation.gstin}<br>
+            State Name: ${invoiceData.companyInformation.state.name}, Code: ${invoiceData.companyInformation.state.code}<br>
+            CIN No: ${invoiceData.companyInformation.cinNo}<br>
+            Email: ${invoiceData.companyInformation.email.join(', ')}
+        `;
 
-                
-              </td>
-              
-            </tr>
-          </tbody>
-        </table>
-        <table className="goods-table">
-          <thead>
+        document.getElementById('invoiceDetails').innerHTML = `
+            Invoice No: <b>${invoiceData.invoiceDetails.invoiceNo}</b><br>
+            Consignor Invoice No: <b>${invoiceData.invoiceDetails.consignorInvoiceNo}</b><br>
+            E-Way Bill No: <b>${invoiceData.invoiceDetails.despatchDetails.eWayBillNo}</b><br>
+            Docket No: <b>${invoiceData.invoiceDetails.despatchDetails.docketNo}</b>
+        `;
+
+        document.getElementById('invoiceDates').innerHTML = `
+            Invoice Date: <b>${invoiceData.invoiceDetails.invoiceDate}</b><br>
+            Consignor Invoice Date: <b>${invoiceData.invoiceDetails.consignorInvoiceDate}</b><br>
+            Mode: <b>${invoiceData.invoiceDetails.mode}</b>
+        `;
+
+        document.getElementById('billingInformation').innerHTML = `
+            Bill To: <b>${invoiceData.billingInformation.billTo.name}</b><br>
+            Address: ${invoiceData.billingInformation.billTo.address}<br>
+            State: ${invoiceData.billingInformation.billTo.state.name}, Code: ${invoiceData.billingInformation.billTo.state.code}<br>
+            Pin Code: ${invoiceData.billingInformation.billTo.pinCode}<br>
+            GST No: ${invoiceData.billingInformation.billTo.gstNo}
+        `;
+
+        document.getElementById('supplyInformation').innerHTML = `
+            Place of Supply: <b>${invoiceData.supplyAndShippingInformation.placeOfSupply}</b><br>
+            Origin: <b>${invoiceData.supplyAndShippingInformation.origin}</b><br>
+            Total Pkt: <b>${invoiceData.supplyAndShippingInformation.totalPkt}</b>
+        `;
+
+        document.getElementById('shippingInformation').innerHTML = `
+            Date of Supply: <b>${invoiceData.supplyAndShippingInformation.dateOfSupply}</b><br>
+            Destination: <b>${invoiceData.supplyAndShippingInformation.destination}</b><br>
+            Weight (Kg): <b>${invoiceData.supplyAndShippingInformation.weightKg}</b>
+        `;
+
+        document.getElementById('consignorInformation').innerHTML = `
+            Consignor: <b>${invoiceData.consignorInformation.consignor.name}</b><br>
+            Address: ${invoiceData.consignorInformation.consignor.address}<br>
+            State: ${invoiceData.consignorInformation.consignor.state}<br>
+            GST No: ${invoiceData.consignorInformation.consignor.gstNo}
+        `;
+
+        document.getElementById('consigneeInformation').innerHTML = `
+            Consignee: <b>${invoiceData.consignorInformation.consignee.name}</b><br>
+            Address: ${invoiceData.consignorInformation.consignee.address}<br>
+            State: ${invoiceData.consignorInformation.consignee.state}<br>
+            GST No: ${invoiceData.consignorInformation.consignee.gstNo}
+        `;
+
+        document.getElementById('bankDetails').innerHTML = `
+            Account Name: <b>${invoiceData.bankDetails.accountName}</b><br>
+            Bank Name: <b>${invoiceData.bankDetails.bankName}</b><br>
+            Account Number: <b>${invoiceData.bankDetails.accountNumber}</b><br>
+            Address: ${invoiceData.bankDetails.address}<br>
+            IFSC Code: <b>${invoiceData.bankDetails.ifscCode}</b>
+        `;
+
+        // Populate goods and charges information
+        const goodsAndCharges = invoiceData.goodsAndChargesInformation.items.map(item => `
             <tr>
-              <td>Description of Goods</td>
-              <td>SAC/HSD</td>
-              <td>WT.</td>
-              <td>Rate</td>
-              <td>Non Taxable</td>
-              <td>Taxable</td>
+                <td>${item.description}</td>
+                <td>${item.sacHsd}</td>
+                <td>${item.weight ? item.weight : '-'}</td>
+                <td>${item.rate ? item.rate : '-'}</td>
+                <td>${item.nonTaxable ? item.nonTaxable.toFixed(2) : '-'}</td>
+                <td>${item.taxable.toFixed(2)}</td>
             </tr>
-          </thead>
-          <tbody>
+        `).join('');
+
+        document.getElementById('goodsAndCharges').innerHTML = goodsAndCharges;
+
+        // Populate tax information
+        document.getElementById('taxPayableInWords').innerText = invoiceData.taxInformation.taxPayableInWords;
+        document.getElementById('igst').innerText = invoiceData.taxInformation.igst.toFixed(2);
+        document.getElementById('netAmountAfterTax').innerText = invoiceData.taxInformation.netAmountAfterTax.toFixed(2);
+
+        // Populate HSN/SAC details
+        document.getElementById('hsnSacDetails').innerHTML = `
             <tr>
-              <th>T - Freight</th>
-              <th>996512</th>
-              <th>2250</th>
-              <th>19</th>
-              <th></th>
-              <th>42,750.00</th>
+                <td>${invoiceData.hsnSacDetails.hsnSac}</td>
+                <td>${invoiceData.hsnSacDetails.taxableValue.toFixed(2)}</td>
+                <td>${invoiceData.hsnSacDetails.integratedTax.rate}</td>
+                <td>${invoiceData.hsnSacDetails.integratedTax.amount.toFixed(2)}</td>
+                <td>${invoiceData.hsnSacDetails.totalTaxAmount.toFixed(2)}</td>
             </tr>
-            <tr>
-              <th>T - Docket Charges</th>
-              <th>996512</th>
-              <th></th>
-              <hd></hd>
-              <th></th>
-              <th>200.00</th>
-            </tr>
-            <tr>
-              <th>T - Pickup Charges</th>
-              <th>996512</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th>3,000.00</th>
-            </tr>
-            <tr>
-              <th>T - Delivery Charges</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th>4,500.00</th>
-            </tr>
-            <tr>
-              <th>T - Station Clearance Charges</th>
-              <th>996512</th>
-              <th></th>
-              <th></th>
-              <th></th>
-              <th>300.00</th>
-            </tr>
-          </tbody>
-        </table>
-        <table className="total-table">
-          <tbody>
-            <tr>
-              <td>Tax Payable in words: <b>Indian Rupees Two Thousand Five Hundred Thirty Seven and Fifty paise Only</b></td>
-              <td>
-                IGST:  <b> 2,537.50</b>
-                <br></br>
-                <p>Net Amount after Tax: <b>53,287.50</b></p>
-              </td>
-            </tr>
-            <tr>
-            </tr>
-          </tbody>
-        </table>
-       
-        <table className="goods-table">
-          <thead>
-            <tr>
-              <th>HSN/SAC</th>
-              <th>Taxable value</th>
-              <th colspan="2">Integrated Tax</th>
-              <th>Total Tax Amount</th>
-             
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td><b>Rate</b></td>
-              <td><b>Amount</b></td>
-              <td></td>
-             
-            </tr>
-            <tr>
-              <td>996512</td>
-              <td>50,750.50</td>
-              <td>5%</td>
-              <td>2,537.50</td>
-              <td>2,537.50</td>
-             
-            </tr>
-            <tr>
-              <td><b>Total</b></td>
-              <td><b>50,750.50</b></td>
-              <td></td>
-              <td><b>2,537.50</b></td>
-              <td><b>2,537.50</b></td>
-             
-            </tr>
-            
-            
-          </tbody>
-        </table>
-        
-        <div className="footer">
-          <div className="footer-info">
-            <p>Total Payable in words inclusive tax: <b>Indian Rupees Fifty Three Thousand Two Hundred Eighty Seven and Fifty paise Only ( ₹ 53,287.50 )</b></p> <hr></hr>
-            <p>1. JURISDICTION: All disputes arising under this bill shall be subject to New Delhi jurisdiction.</p>
-            <p>2. PAYMENT: Interest @ 22% per annum will be charged on total bill amount if payments is not made within 15 days of presentation of bill.</p>
-            <p>3. Payments by Draft/Account payee cheque only.</p>
-            <p>4. Any discrepancy in the bill must be reported back within 5 days. We will not accept any Debit against this bill later on.</p>
-            <p>5. PAN NO.: AAUCS1139F; TAN NO.: DELS54477D; GST NO.: 07AAUCS1139F1Z6</p>
-          </div>
-          <div className="footer-signature">
-            <p>For Sai Cargo Freight Forwarders Pvt. Ltd</p>
-            <p className="signature">Authorized Signatory</p>
-          </div>
+        `;
+
+        // Populate footer information
+        document.getElementById('footerInfo').innerHTML = `
+            Total Payable In Words: <b>${invoiceData.footerInformation.totalPayableInWords}</b><br>
+            Jurisdiction: ${invoiceData.footerInformation.jurisdiction}<br>
+            Payment Terms: ${invoiceData.footerInformation.paymentTerms}<br>
+            Payment Method: ${invoiceData.footerInformation.paymentMethod}<br>
+            Discrepancy Clause: ${invoiceData.footerInformation.discrepancyClause}<br>
+            PAN No: ${invoiceData.footerInformation.panNo}<br>
+            TAN No: ${invoiceData.footerInformation.tanNo}<br>
+            GST No: ${invoiceData.footerInformation.gstNo}
+        `;
+
+        document.getElementById('footerSignature').innerText = invoiceData.footerSignature.companyName;
+
+    }, []);
+
+    return (
+        <div className="container">
+            <div className="invoice">
+                <table className="header-table">
+                    <tbody>
+                        <tr>
+                            <td colSpan="3" className="header">
+                                <h2 id="invoiceTitle"><strong>Tax Invoice</strong></h2>
+                                <p id="sectionAndRuleReference"><b></b></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td className="left" id="companyInformation"></td>
+                            <td className="middle" id="invoiceDetails"></td>
+                            <td className="right" id="invoiceDates"></td>
+                        </tr>
+                        <tr>
+                            <td className="left" id="billingInformation"></td>
+                            <td className="middle" id="supplyInformation"></td>
+                            <td className="right" id="shippingInformation"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table className="transport-details">
+                    <tbody>
+                        <tr>
+                            <td id="consignorInformation"></td>
+                            <td id="consigneeInformation"></td>
+                            <td id="bankDetails"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table className="goods-table">
+                    <thead>
+                        <tr>
+                            <td>Description of Goods</td>
+                            <td>SAC/HSD</td>
+                            <td>WT.</td>
+                            <td>Rate</td>
+                            <td>Non Taxable</td>
+                            <td>Taxable</td>
+                        </tr>
+                    </thead>
+                    <tbody id="goodsAndCharges"></tbody>
+                </table>
+                <table className="total-table">
+                    <tbody>
+                        <tr>
+                            <td>Tax Payable in words: <b id="taxPayableInWords"></b></td>
+                            <td>
+                                IGST: <b id="igst"></b><br />
+                                Net Amount after Tax: <b id="netAmountAfterTax"></b>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <table className="goods-table">
+                    <thead>
+                        <tr>
+                            <th>HSN/SAC</th>
+                            <th>Taxable value</th>
+                            <th colSpan="2">Integrated Tax</th>
+                            <th>Total Tax Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hsnSacDetails"></tbody>
+                </table>
+                <div className="footer">
+                    <div className="footer-info" id="footerInfo"></div>
+                    <div className="footer-signature">
+                        <p id="footerSignature"></p>
+                        <p className="signature">Authorized Signatory</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  );
-}
+    );
+};
 
-export default App;
+export default Invoice;
